@@ -1,0 +1,37 @@
+CREATE DATABASE	GRUPALES;
+
+USE GRUPALES;
+
+
+CREATE TABLE GRUPO (		IdeGru 		INT		NOT NULL,  
+				NomGru 		VARCHAR(30) 	NOT NULL, 
+				PRIMARY KEY	(IdeGru));
+
+
+CREATE TABLE PERSONA(		
+				DniPer 		VARCHAR(9),
+				NomPer 		VARCHAR(200),
+				IdeGru 		INT, 
+				PRIMARY KEY	(DniPer), 
+				FOREIGN KEY 	(IdeGru) 	REFERENCES GRUPO (IdeGru));
+
+
+
+CREATE TABLE DET_GRU (		FecPag 		DATE, 
+				CuoTot 		INT, 
+				CuoRes 		INT, 
+				MonCuo 		DOUBLE);  
+
+
+
+INSERT INTO PERSONA		VALUES	('12345',0001,'LUIS',0001);
+
+DELETE FROM PERSONA;
+
+
+SELECT * FROM persona WHERE DniPer = '42337861';
+SELECT * FROM persona WHERE DniPer = '76683460';
+76683460
+
+
+146453 reporte 
